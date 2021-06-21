@@ -30,7 +30,7 @@ export default class Logger {
 		return this;
 	}
 
-	updateFile(logType: "success" | "warn" | "info" | "error", context: string, message: string, timestamp: string, stack?: string) {
+	private updateFile(logType: "success" | "warn" | "info" | "error", context: string, message: string, timestamp: string, stack?: string) {
 		const freshLogs = this.readJSON();
 
 		freshLogs
@@ -46,7 +46,7 @@ export default class Logger {
 		writeFileSync(this.logLocation, JSON.stringify(freshLogs, null, "\t"));
 	}
 
-	readJSON() {
+	private readJSON() {
 		const response = readFileSync(this.logLocation);
 
 		const freshLogs = JSON.parse(response.toString());
@@ -54,7 +54,7 @@ export default class Logger {
 		return freshLogs as Log[];
 	}
 
-	getTimestamp() {
+	private getTimestamp() {
 		return new Date().toUTCString();
 	}
 

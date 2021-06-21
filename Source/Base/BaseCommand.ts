@@ -12,6 +12,7 @@ export default abstract class BaseCommand {
 	public name: string = "";
 	public description: string = "";
 	public aliases: string[] = [];
+	public category: string = "";
 
 	constructor(client: RedditMasterClient, config: CommandConfig) {
 		this.client = client;
