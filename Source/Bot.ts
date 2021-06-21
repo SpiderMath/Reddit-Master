@@ -5,6 +5,6 @@ import RedditMasterClient from "./Base/Client";
 new RedditMasterClient()
 	.start({
 		prefix: [
-			"`"
+			"`",
 		],
 	});
