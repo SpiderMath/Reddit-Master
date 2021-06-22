@@ -4,27 +4,41 @@
 		"type": "success",
 		"context": "client/commands",
 		"message": "Loading command directory: Admin",
-		"timestamp": "Mon, 21 Jun 2021 12:41:11 GMT"
+		"timestamp": "Mon, 21 Jun 2021 13:51:10 GMT"
 	},
 	{
 		"id": 2,
 		"type": "success",
 		"context": "client/commands",
 		"message": "Loading command directory: Client",
-		"timestamp": "Mon, 21 Jun 2021 12:41:11 GMT"
+		"timestamp": "Mon, 21 Jun 2021 13:51:10 GMT"
 	},
 	{
 		"id": 3,
 		"type": "success",
-		"context": "client/events",
-		"message": "Listening for event ready 👂",
-		"timestamp": "Mon, 21 Jun 2021 12:41:11 GMT"
+		"context": "client/commands",
+		"message": "Loaded command ping 💪",
+		"timestamp": "Mon, 21 Jun 2021 13:51:10 GMT"
 	},
 	{
 		"id": 4,
 		"type": "success",
+		"context": "client/events",
+		"message": "Listening for event message 👂",
+		"timestamp": "Mon, 21 Jun 2021 13:51:10 GMT"
+	},
+	{
+		"id": 5,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for event ready 👂",
+		"timestamp": "Mon, 21 Jun 2021 13:51:10 GMT"
+	},
+	{
+		"id": 6,
+		"type": "success",
 		"context": "client",
 		"message": "Logged in as Reddit Master#8400",
-		"timestamp": "Mon, 21 Jun 2021 12:41:13 GMT"
+		"timestamp": "Mon, 21 Jun 2021 13:51:27 GMT"
 	}
 ]

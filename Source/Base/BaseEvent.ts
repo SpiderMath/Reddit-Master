@@ -19,7 +19,4 @@ export default abstract class BaseEvent {
 			},
 		);
 	}
-
-	// eslint-disable-next-line no-unused-vars
-	abstract run(...args: any[]): Promise<any>
 };

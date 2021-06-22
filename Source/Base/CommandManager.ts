@@ -11,7 +11,7 @@ export class CommandManager {
 		command.aliases.forEach((alias) => this.aliasCache.set(alias.toLowerCase(), command.name.toLowerCase()));
 	}
 
-	public get(name: string) {
+	public get(name: string | undefined) {
 		// @ts-ignore
 		return this.commandCache.get(name.toLowerCase()) || this.commandCache.get(this.aliasCache.get(name.toLowerCase()));
 	}

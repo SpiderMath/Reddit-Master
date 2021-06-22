@@ -8,5 +8,7 @@ export default class ReadyEvent extends BaseEvent {
 
 	async run() {
 		this.client.logger.success("client", `Logged in as ${this.client.user?.tag}`);
+
+		this.client.prefixes.push(`<@!${this.client.user?.id}>`);
 	}
 };

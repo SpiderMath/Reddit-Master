@@ -65,7 +65,8 @@ export default class RedditMasterClient extends Client {
 
 			const pull: BaseEvent = new pseudoPull.default(this);
 
-			this.on(pull.eventName, (...args: any[]) => pull.run(...args));
+			// @ts-ignore
+			this.on(pull.eventName, async (...args: any[]) => await pull.run(...args));
 
 			this.logger.success("client/events", `Listening for event ${pull.eventName} 👂`);
 		}
