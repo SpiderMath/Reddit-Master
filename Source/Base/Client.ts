@@ -20,7 +20,7 @@ export default class RedditMasterClient extends Client {
 
 	constructor() {
 		super({
-			intents: [],
+			intents: ["GUILD_MESSAGES", "GUILD_WEBHOOKS", "GUILDS"],
 			ws: {
 				properties: { $browser: "Discord Android" },
 			},
@@ -30,6 +30,7 @@ export default class RedditMasterClient extends Client {
 	public async start(config: StartConfig) {
 		await this._loadCommands(config.commandDir);
 		await this._loadEvents(config.eventDir);
+		this.prefixes = config.prefixes;
 		this.login(process.env.TOKEN);
 	}
 
@@ -59,7 +60,7 @@ export default class RedditMasterClient extends Client {
 			const pseudoPull = await import(join(eventDir, file));
 			const pull: Event = pseudoPull.default;
 
-			this.on(pull.name, pull.run.bind(null, this));
+			this.on(pull.name, await pull.run.bind(null, this));
 			this.logger.success("client/events", `Listening for Event: ${pull.name}`);
 		}
 	}

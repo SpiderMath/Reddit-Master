@@ -11,7 +11,7 @@ export default class CommandManager {
 		cmd.aliases.forEach(alias => this.aliases.set(alias.toLowerCase(), cmd.name.toLowerCase()));
 	}
 
-	public get(name: string) {
+	public get(name: string | undefined) {
 		// @ts-ignore
 		return this.commandCache.get(name.toLowerCase()) || this.commandCache.get(this.aliases.get(name.toLowerCase()));
 	}

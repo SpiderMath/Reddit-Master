@@ -82,5 +82,369 @@
 		"context": "client",
 		"message": "Logged in as Reddit Master#8400",
 		"timestamp": "Tue, 22 Jun 2021 01:58:34 GMT"
+	},
+	{
+		"id": 13,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 02:00:41 GMT"
+	},
+	{
+		"id": 14,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 02:00:42 GMT"
+	},
+	{
+		"id": 15,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 02:00:42 GMT"
+	},
+	{
+		"id": 16,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 02:00:42 GMT"
+	},
+	{
+		"id": 17,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 02:00:59 GMT"
+	},
+	{
+		"id": 18,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 02:01:40 GMT"
+	},
+	{
+		"id": 19,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 02:01:40 GMT"
+	},
+	{
+		"id": 20,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 02:01:40 GMT"
+	},
+	{
+		"id": 21,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 02:01:40 GMT"
+	},
+	{
+		"id": 22,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 02:01:57 GMT"
+	},
+	{
+		"id": 23,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 02:02:32 GMT"
+	},
+	{
+		"id": 24,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 02:02:32 GMT"
+	},
+	{
+		"id": 25,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 02:02:32 GMT"
+	},
+	{
+		"id": 26,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 02:02:32 GMT"
+	},
+	{
+		"id": 27,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 02:02:49 GMT"
+	},
+	{
+		"id": 28,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 02:08:29 GMT"
+	},
+	{
+		"id": 29,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 02:08:29 GMT"
+	},
+	{
+		"id": 30,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 02:08:29 GMT"
+	},
+	{
+		"id": 31,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 02:08:29 GMT"
+	},
+	{
+		"id": 32,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 02:08:31 GMT"
+	},
+	{
+		"id": 33,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 02:30:36 GMT"
+	},
+	{
+		"id": 34,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 02:30:37 GMT"
+	},
+	{
+		"id": 35,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 03:09:00 GMT"
+	},
+	{
+		"id": 36,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 03:09:00 GMT"
+	},
+	{
+		"id": 37,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 03:09:01 GMT"
+	},
+	{
+		"id": 38,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 03:09:01 GMT"
+	},
+	{
+		"id": 39,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 03:09:03 GMT"
+	},
+	{
+		"id": 40,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 03:10:21 GMT"
+	},
+	{
+		"id": 41,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 03:10:21 GMT"
+	},
+	{
+		"id": 42,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 03:10:21 GMT"
+	},
+	{
+		"id": 43,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 03:10:21 GMT"
+	},
+	{
+		"id": 44,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 03:10:22 GMT"
+	},
+	{
+		"id": 45,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 03:12:15 GMT"
+	},
+	{
+		"id": 46,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 03:12:15 GMT"
+	},
+	{
+		"id": 47,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 03:12:15 GMT"
+	},
+	{
+		"id": 48,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 03:12:15 GMT"
+	},
+	{
+		"id": 49,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 03:12:17 GMT"
+	},
+	{
+		"id": 50,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 03:15:44 GMT"
+	},
+	{
+		"id": 51,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 03:15:44 GMT"
+	},
+	{
+		"id": 52,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 03:15:44 GMT"
+	},
+	{
+		"id": 53,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 03:15:44 GMT"
+	},
+	{
+		"id": 54,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 03:15:46 GMT"
+	},
+	{
+		"id": 55,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 03:18:57 GMT"
+	},
+	{
+		"id": 56,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 03:18:57 GMT"
+	},
+	{
+		"id": 57,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 03:18:57 GMT"
+	},
+	{
+		"id": 58,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 03:18:57 GMT"
+	},
+	{
+		"id": 59,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 03:18:58 GMT"
+	},
+	{
+		"id": 60,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 03:31:37 GMT"
+	},
+	{
+		"id": 61,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 03:31:37 GMT"
+	},
+	{
+		"id": 62,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: message",
+		"timestamp": "Tue, 22 Jun 2021 03:31:37 GMT"
+	},
+	{
+		"id": 63,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 03:31:37 GMT"
+	},
+	{
+		"id": 64,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 03:31:39 GMT"
 	}
 ]
