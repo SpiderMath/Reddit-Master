@@ -40,5 +40,47 @@
 		"context": "client",
 		"message": "Logged in as Reddit Master#8400",
 		"timestamp": "Tue, 22 Jun 2021 01:32:03 GMT"
+	},
+	{
+		"id": 7,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 01:56:32 GMT"
+	},
+	{
+		"id": 8,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 01:56:32 GMT"
+	},
+	{
+		"id": 9,
+		"type": "info",
+		"context": "client/commands",
+		"message": "Loading commands from Client",
+		"timestamp": "Tue, 22 Jun 2021 01:58:17 GMT"
+	},
+	{
+		"id": 10,
+		"type": "success",
+		"context": "client/commands",
+		"message": "Loaded command: ping",
+		"timestamp": "Tue, 22 Jun 2021 01:58:18 GMT"
+	},
+	{
+		"id": 11,
+		"type": "success",
+		"context": "client/events",
+		"message": "Listening for Event: ready",
+		"timestamp": "Tue, 22 Jun 2021 01:58:18 GMT"
+	},
+	{
+		"id": 12,
+		"type": "success",
+		"context": "client",
+		"message": "Logged in as Reddit Master#8400",
+		"timestamp": "Tue, 22 Jun 2021 01:58:34 GMT"
 	}
 ]
