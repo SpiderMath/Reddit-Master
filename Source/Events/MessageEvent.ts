@@ -16,7 +16,6 @@ const MessageEvent: Event = {
 		}
 
 		if(prefix === "") return;
-		console.log("I am out");
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
 		const commandName = args.shift();
