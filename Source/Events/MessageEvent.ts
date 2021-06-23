@@ -16,10 +16,14 @@ const MessageEvent: Event = {
 		}
 
 		if(prefix === "") return;
+		// @ts-ignore
+		if(prefix === `<@!${client.user?.id}>`) message.mentions.users.delete(message.mentions.users.first().id);
 		const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
 		const commandName = args.shift();
 		const command = client.commands.get(commandName);
+
+		console.log(message.content + "\n" + args.join("\n") + commandName);
 
 		if(!command) return;
 

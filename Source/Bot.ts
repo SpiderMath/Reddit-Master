@@ -7,5 +7,5 @@ new RedditMasterClient().start({
 	commandDir: join(__dirname, "Commands"),
 	eventDir: join(__dirname, "Events"),
 	prefixes: ["`"],
-	developers: [`${BigInt("839367177899737108")}`],
+	developers: ["839367177899737108"],
 });

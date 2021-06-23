@@ -1,4 +1,4 @@
-import { Client } from "discord.js";
+import { Client, Intents } from "discord.js";
 import { readdir } from "fs/promises";
 import { join } from "path";
 import Command from "../Types/Command";
@@ -19,10 +19,14 @@ export default class RedditMasterClient extends Client {
 	public commands = new CommandManager();
 	public logger = new Logger();
 	public util = new Util();
+	public devs: `${bigint}`[] = [];
 
 	constructor() {
 		super({
-			intents: ["GUILD_MESSAGES", "GUILD_WEBHOOKS", "GUILDS"],
+			intents: [
+				"GUILD_WEBHOOKS",
+				"GUILD_MESSAGES",
+			],
 			ws: {
 				properties: { $browser: "Discord Android" },
 			},
@@ -33,6 +37,8 @@ export default class RedditMasterClient extends Client {
 		await this._loadCommands(config.commandDir);
 		await this._loadEvents(config.eventDir);
 		this.prefixes = config.prefixes;
+		this.devs = config.developers;
+
 		this.login(process.env.TOKEN);
 	}
 
