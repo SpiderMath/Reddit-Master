@@ -15,6 +15,7 @@ interface StartConfig {
 export default class RedditMasterClient extends Client {
 	public logger = new Logger();
 	public commands = new CommandManager();
+	public prefixes: string[] = [];
 
 	constructor() {
 		super({
@@ -31,6 +32,7 @@ export default class RedditMasterClient extends Client {
 	public async start(config: StartConfig) {
 		await this._loadCommands(config.commandDir);
 		await this._loadEvents(config.eventDir);
+		this.prefixes = config.prefixes;
 
 		this.login(process.env.TOKEN);
 	}
