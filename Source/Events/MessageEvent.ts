@@ -1,6 +1,8 @@
-import { Message } from "discord.js";
+import { Message, Collection } from "discord.js";
 import BaseEvent from "../Base/BaseEvent";
 import RedditMasterClient from "../Base/Client";
+
+const cooldowns: Collection<string, number> = new Collection();
 
 export default class MessageEvent extends BaseEvent {
 	constructor(client: RedditMasterClient) {
@@ -27,6 +29,16 @@ export default class MessageEvent extends BaseEvent {
 		const command = this.client.commands.get(commandName);
 
 		if(!command) return;
+
+		const timestamp = cooldowns.get(`${command.name}-${message.author.id}`);
+		const now = Date.now();
+
+		if(timestamp) {
+			if(now - timestamp <= 3000) return message.reply(`Please wait for ${((timestamp - now) / 1000).toFixed(2)} seconds to use this command again`);
+		}
+
+		cooldowns.set(`${command.name}-${message.author.id}`, now + 3000);
+		setTimeout(() => cooldowns.delete(`${command.name}-${message.author.id}`), 3000);
 
 		try {
 			command.run(message, args);
