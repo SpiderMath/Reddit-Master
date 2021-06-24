@@ -1,4 +1,5 @@
-import { Message } from "discord.js";
+import { stripIndents } from "common-tags";
+import { Message, MessageEmbed } from "discord.js";
 import BaseCommand from "../../Base/BaseCommand";
 import RedditMasterClient from "../../Base/Client";
 
@@ -11,6 +12,17 @@ export default class PingCommand extends BaseCommand {
 	}
 
 	async run(message: Message) {
-		return message.channel.send(`${this.client.ws.ping}`);
+		const msg = await message.channel.send("Pinging...");
+
+		const PingEmbed = new MessageEmbed()
+			.setTitle("API Latency")
+			.setColor("GREEN")
+			.setDescription(stripIndents`
+				Websocket Ping: ${this.client.ws.ping} ms
+				Discord API Latency: ${(msg.createdTimestamp - message.createdTimestamp)} ms
+			`);
+
+		return message.channel.send(this.client.util.embedFormat(PingEmbed))
+			.then(() => msg.delete());
 	}
 };
