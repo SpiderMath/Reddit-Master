@@ -5,6 +5,7 @@ import BaseCommand from "./BaseCommand";
 import BaseEvent from "./BaseEvent";
 import Logger from "../Helpers/Logger";
 import CommandManager from "./CommandManager";
+import Util from "../Helpers/Util";
 
 interface StartConfig {
 	commandDir: string,
@@ -16,6 +17,7 @@ export default class RedditMasterClient extends Client {
 	public logger = new Logger();
 	public commands = new CommandManager();
 	public prefixes: string[] = [];
+	public util = new Util();
 
 	constructor() {
 		super({
