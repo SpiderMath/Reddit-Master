@@ -33,9 +33,7 @@ export default class MessageEvent extends BaseEvent {
 		const timestamp = cooldowns.get(`${command.name}-${message.author.id}`);
 		const now = Date.now();
 
-		if(timestamp) {
-			if(now - timestamp <= 3000) return message.reply(`Please wait for ${((timestamp - now) / 1000).toFixed(2)} seconds to use this command again`);
-		}
+		if(timestamp && now - timestamp <= 3000) return message.reply(`Please wait for ${((timestamp - now) / 1000).toFixed(2)} seconds to use this command again`);
 
 		cooldowns.set(`${command.name}-${message.author.id}`, now + 3000);
 		setTimeout(() => cooldowns.delete(`${command.name}-${message.author.id}`), 3000);
