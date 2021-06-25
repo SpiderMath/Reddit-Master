@@ -27,7 +27,7 @@ export default class AddSubRedditCommand extends BaseCommand {
 		// @ts-ignore
 		this.client.dbCache[index] = data;
 
-		this.client.db.findOneAndUpdate({ _id: message.guild?.id }, data, { upsert: true });
+		this.client.db.findOneAndUpdate({ _id: message.guild?.id }, data, { upsert: true }, (err, doc) => doc.save());
 
 		return message.channel.send(`${this.client.emotes.success} Updated your slots. You have ${this.client.slotcount - data.subReddits.length} slots left`);
 	}
