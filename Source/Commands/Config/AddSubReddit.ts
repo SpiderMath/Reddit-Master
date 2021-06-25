@@ -21,6 +21,7 @@ export default class AddSubRedditCommand extends BaseCommand {
 		})[0];
 
 		if(!data.updateChannel || !this.client.channels.cache.get(data.updateChannel)) return message.channel.send(`${this.client.emotes.error} The guild does not have subreddit updates channel setup. Please set it up and then run this command!`);
+		if(data.subReddits.includes(args[0].toLowerCase())) return message.channel.send(`${this.client.emotes.error} This subreddit is already in your subscription list!`);
 		if(data.subReddits.length === this.client.slotcount) return message.channel.send(`${this.client.emotes.error} Maximum number of subreddits reached. Please remove one of the subreddits to add a new one`);
 
 		data.subReddits.push(args[0].toLowerCase());
