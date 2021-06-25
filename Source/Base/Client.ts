@@ -48,6 +48,7 @@ export default class RedditMasterClient extends Client {
 		await connect(process.env.REDDITMONGO, {
 			useUnifiedTopology: true,
 			useNewUrlParser: true,
+			useFindAndModify: false,
 		}).then(() => this.logger.success("client/database", "Connected to the Database"));
 
 		this.login(process.env.TOKEN);
