@@ -22,6 +22,11 @@ export default class RedditMasterClient extends Client {
 	public util = new Util();
 	public db: Model<any, {}, {}> = GuildModel;
 	public dbCache: GuildModelInterface[] = [];
+	public emotes = {
+		success: "<a:checkmark:840147155112165406>",
+		error: "<a:error:840147176360378388>",
+	};
+	public slotcount: number = 3;
 
 	constructor() {
 		super({
