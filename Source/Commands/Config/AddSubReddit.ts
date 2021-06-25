@@ -12,6 +12,8 @@ export default class AddSubRedditCommand extends BaseCommand {
 	}
 
 	async run(message: Message, args: string[]) {
+		if(!this.client.util.hasReqPerms(message.member)) return message.channel.send(`${this.client.emotes.error} You need \`Manage Server\` or \`Administrator\` permission to use this command!`);
+
 		if(!args[0]) return message.channel.send(`${this.client.emotes.error} Subreddit not provided`);
 
 		let index: number;

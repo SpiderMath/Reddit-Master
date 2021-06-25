@@ -11,6 +11,8 @@ export default class SetChannelCommand extends BaseCommand {
 	}
 
 	async run(message: Message, args: `${bigint}`[]) {
+		if(!this.client.util.hasReqPerms(message.member)) return message.channel.send(`${this.client.emotes.error} You need \`Manage Server\` or \`Administrator\` permission to use this command!`);
+
 		if(!args[0]) return message.channel.send(`${this.client.emotes.error} Channel name was not provided`);
 
 		let channel = message.mentions.channels.first() || message.guild?.channels.cache.get(args[0]) || message.guild?.channels.cache.filter(ch => new RegExp(args[0], "i").test(ch.name));
@@ -20,6 +22,7 @@ export default class SetChannelCommand extends BaseCommand {
 			else if(channel.size === 0) return message.channel.send(`${this.client.emotes.error} No channels of that name found`);
 			else channel = channel.first();
 		}
+
 		if(!channel) return message.channel.send(`${this.client.emotes.error} Invalid channel provided`);
 
 		let index: number;
@@ -27,6 +30,8 @@ export default class SetChannelCommand extends BaseCommand {
 			index = pos;
 			return data._id === message.guild?.id;
 		})[0];
+
+		if(info.updateChannel === channel.id) return message.channel.send(`${this.client.emotes.error} The requested channel is the one which is already listed!`);
 
 		info.updateChannel = channel.id;
 

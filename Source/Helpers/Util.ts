@@ -1,4 +1,4 @@
-import { ColorResolvable, MessageEmbed, User } from "discord.js";
+import { ColorResolvable, GuildMember, MessageEmbed, Permissions, User } from "discord.js";
 
 export default class Util {
 	public embedFormat(embeds: MessageEmbed | MessageEmbed[]) {
@@ -12,5 +12,9 @@ export default class Util {
 			.setTimestamp()
 			.setAuthor(user.tag, user.displayAvatarURL({ dynamic: true }) || user.defaultAvatarURL)
 			.setColor(colour);
+	}
+
+	public hasReqPerms(member: GuildMember | null) {
+		return member && (member.permissions.has(Permissions.FLAGS.MANAGE_GUILD) || member.permissions.has(Permissions.FLAGS.ADMINISTRATOR));
 	}
 };
