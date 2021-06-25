@@ -12,6 +12,10 @@ const GuildSchema = new Schema({
 		type: [String],
 		default: [],
 	},
+	updateChannel: {
+		type: String,
+		required: false,
+	},
 });
 
 export const GuildModel = model("subreddits", GuildSchema);
@@ -20,4 +24,5 @@ export interface GuildModelInterface {
 	_id: string,
 	latestPost?: string,
 	subReddits: string[],
+	updateChannel?: `${bigint}`,
 };
