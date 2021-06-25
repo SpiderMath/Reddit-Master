@@ -6,6 +6,8 @@ import BaseEvent from "./BaseEvent";
 import Logger from "../Helpers/Logger";
 import CommandManager from "./CommandManager";
 import Util from "../Helpers/Util";
+import { connect, Model } from "mongoose";
+import { GuildModel, GuildModelInterface } from "../Models/GuildSchema";
 
 interface StartConfig {
 	commandDir: string,
@@ -18,6 +20,8 @@ export default class RedditMasterClient extends Client {
 	public commands = new CommandManager();
 	public prefixes: string[] = [];
 	public util = new Util();
+	public db: Model<any, {}, {}> = GuildModel;
+	public dbCache: GuildModelInterface[] = [];
 
 	constructor() {
 		super({
@@ -35,6 +39,11 @@ export default class RedditMasterClient extends Client {
 		await this._loadCommands(config.commandDir);
 		await this._loadEvents(config.eventDir);
 		this.prefixes = config.prefixes;
+		// @ts-ignore
+		await connect(process.env.REDDITMONGO, {
+			useUnifiedTopology: true,
+			useNewUrlParser: true,
+		}).then(() => this.logger.success("client/database", "Connected to the Database"));
 
 		this.login(process.env.TOKEN);
 	}
