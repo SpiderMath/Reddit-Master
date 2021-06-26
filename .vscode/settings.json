@@ -1,6 +1,5 @@
 {
-	"workbench.colorTheme": "Atom One Light",
-	"glassit.alpha": 255,
+	"workbench.colorTheme": "Default Dark+",
 	"powermode.enabled": true,
 	"powermode.enableShake": false,
 	"powermode.enableExplosions": true,
