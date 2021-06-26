@@ -1,0 +1,8 @@
+{
+	"workbench.colorTheme": "Atom One Light",
+	"glassit.alpha": 255,
+	"powermode.enabled": true,
+	"powermode.enableShake": false,
+	"powermode.enableExplosions": true,
+	"powermode.presets": "particles"
+}
