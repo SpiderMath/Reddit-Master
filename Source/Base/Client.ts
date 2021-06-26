@@ -1,4 +1,4 @@
-import { Client, Intents } from "discord.js";
+import { Client, Collection, Intents } from "discord.js";
 import { readdir } from "fs/promises";
 import { join } from "path";
 import BaseCommand from "./BaseCommand";
@@ -21,7 +21,7 @@ export default class RedditMasterClient extends Client {
 	public prefixes: string[] = [];
 	public util = new Util();
 	public db: Model<any, {}, {}> = GuildModel;
-	public dbCache: GuildModelInterface[] = [];
+	public dbCache: Collection<`${bigint}` | undefined, GuildModelInterface> = new Collection();
 	public emotes = {
 		success: "<a:checkmark:840147155112165406>",
 		error: "<a:error:840147176360378388>",

@@ -21,18 +21,19 @@ export default class ReadyEvent extends BaseEvent {
 			if(!data) {
 				const newData = new this.client.db({
 					_id: guild.id,
-					subReddits: ["memes"],
+					subReddits: [],
 				});
 
 				newData.save();
-				return this.client.dbCache.push({
+
+				return this.client.dbCache.set(guild.id, {
 					_id: guild.id,
-					subReddits: ["memes"],
+					subReddits: [],
 				});
 			}
 
-			this.client.dbCache.push(data);
-			if(this.client.guilds.cache.last()?.id === key) this.client.logger.success("client/database", `DB Cache size: ${this.client.dbCache.length}`);
+			this.client.dbCache.set(guild.id, data);
+			if(this.client.guilds.cache.last()?.id === key) this.client.logger.success("client/database", `DB Cache size: ${this.client.dbCache.size}`);
 		});
 	}
 }

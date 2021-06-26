@@ -1,6 +1,7 @@
 import { Collection, Message } from "discord.js";
 import BaseCommand from "../../Base/BaseCommand";
 import RedditMasterClient from "../../Base/Client";
+import { GuildModelInterface } from "../../Models/GuildSchema";
 
 export default class SetChannelCommand extends BaseCommand {
 	constructor(client: RedditMasterClient) {
@@ -25,11 +26,8 @@ export default class SetChannelCommand extends BaseCommand {
 
 		if(!channel) return message.channel.send(`${this.client.emotes.error} Invalid channel provided`);
 
-		let index: number;
-		const info = this.client.dbCache.filter((data, pos) => {
-			index = pos;
-			return data._id === message.guild?.id;
-		})[0];
+		// @ts-ignore
+		const info: GuildModelInterface = this.client.dbCache.get(message.guild?.id);
 
 		if(info.updateChannel === channel.id) return message.channel.send(`${this.client.emotes.error} The requested channel is the one which is already listed!`);
 
@@ -38,8 +36,9 @@ export default class SetChannelCommand extends BaseCommand {
 		this.client.db.findOneAndUpdate({ _id: message.guild?.id }, info, { upsert: true }, (err, data) => {
 			data.save();
 		});
-		// @ts-ignore
-		this.client.dbCache[index] = info;
+
+		this.client.dbCache.delete(message.guild?.id);
+		this.client.dbCache.set(message.guild?.id, info);
 
 		return message.channel.send(`${this.client.emotes.success} Updated the reddit posting channel to <#${channel.id}>`);
 	}
